@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
-    <title>Basketball Counter</title>
+    <title>Basketball Scoreboard</title>
 </head>
 <body>
     <div id="main">
         <div class= "scoreboard">
             <p class="scoreboard-title">HOME</p>
-            <p class="scoreboard-score">0</p>
+            <p class="scoreboard-score" id="home-score">0</p>
             <div class="scoreboard-buttons">
-                <button class="scoreboard-btn">+1</button>
-                <button class="scoreboard-btn">+2</button>
-                <button class="scoreboard-btn">+3</button>
+                <button class="scoreboard-btn" id="home-btn-1" onclick="addOnePointHome()">+1</button>
+                <button class="scoreboard-btn" id="home-btn-2" onclick="addTwoPointsHome()">+2</button>
+                <button class="scoreboard-btn" id="home-btn-3" onclick="addThreePointsHome()">+3</button>
             </div>
         </div>
         <div class= "scoreboard">
             <p class="scoreboard-title">GUEST</p>
-            <p class="scoreboard-score">0</p>
+            <p class="scoreboard-score" id="guest-score">0</p>
             <div class="scoreboard-buttons">
-                <button class="scoreboard-btn">+1</button>
-                <button class="scoreboard-btn">+2</button>
-                <button class="scoreboard-btn">+3</button>
+                <button class="scoreboard-btn" id="guest-btn-1" onclick="addOnePointGuest()">+1</button>
+                <button class="scoreboard-btn" id="guest-btn-2" onclick="addTwoPointsGuest()">+2</button>
+                <button class="scoreboard-btn" id="guest-btn-3" onclick="addThreePointsGuest()">+3</button>
             </div>
         </div>
 
     </div>
-    
+    <script src="index.js"></script>
 </body>
 </html>
