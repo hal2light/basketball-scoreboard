@@ -5,39 +5,33 @@ let guestScore = document.getElementById("guest-score")
 let homeScoreCount = 0
 let guestScoreCount = 0
 
-
-function addOnePointHome(){
-    homeScoreCount += 1
+//Button Functions
+function addHomePoints(point){
+    homeScoreCount += point
     homeScore.textContent = homeScoreCount
+    diplayWinner()
 
 }
-
-function addTwoPointsHome(){
-    homeScoreCount += 2 
-    homeScore.textContent = homeScoreCount
-
-}
-
-function addThreePointsHome(){
-    homeScoreCount += 3 
-    homeScore.textContent = homeScoreCount
-
-}
-
-function addOnePointGuest(){
-    guestScoreCount += 1
+function addGuestPoints(point){
+    guestScoreCount += point
     guestScore.textContent = guestScoreCount
+    diplayWinner()
 
 }
+//Who is winning ?
 
-function addTwoPointsGuest(){
-    guestScoreCount += 2
-    guestScore.textContent = guestScoreCount
+function diplayWinner(){
+    if (homeScoreCount > guestScoreCount){
+        homeScore.style.border = '3px solid green'
+        guestScore.style.border = "3px solid red"
+    }
+    else if(guestScoreCount > homeScoreCount){
+        homeScore.style.border = '3px solid red'
+        guestScore.style.border = "3px solid green"
+    }
+    else{
+        homeScore.style.border = '3px solid grey'
+        guestScore.style.border = "3px solid grey"
 
-}
-
-function addThreePointsGuest(){
-    guestScoreCount += 3
-    guestScore.textContent = guestScoreCount
-
+    }  
 }

@@ -43,6 +43,7 @@ body {
     border-radius: 5px;
     margin: 0;
     padding: 20px 0 3px 0;
+    border:3px solid grey;
 }
 .scoreboard-buttons{
     margin: 26px 0;
